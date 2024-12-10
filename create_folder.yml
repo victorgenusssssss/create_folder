@@ -1,0 +1,10 @@
+---
+- name: Create a new directory named new_file_use
+  hosts: all
+  become: yes
+  tasks:
+    - name: Create new_file_use directory
+      file:
+        path: /home/doiadm/new_file_use
+        state: directory
+        mode: '0755'
